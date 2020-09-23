@@ -27,5 +27,11 @@ object CustomerController extends Controller {
 
   override def update: Unit = ???
 
-  override def delete: Unit = ???
+  override def delete: Unit = {
+    LOGGER.info("FORENAME:")
+    val forename = getInput()
+    LOGGER.info("SURNAME:")
+    val surname = getInput()
+    CustomerDAO.delete(new Customer(BSONString(BSONObjectID.generate().stringify), forename, surname))
+  }
 }

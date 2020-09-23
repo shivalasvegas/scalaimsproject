@@ -33,5 +33,5 @@ object OrderDAO extends DAO[Order] {
 
   override def update(t: Order): Unit = ???
 
-  override def delete(id: String): Unit = ???
+  override def delete(t: Order): Unit = ???
 }

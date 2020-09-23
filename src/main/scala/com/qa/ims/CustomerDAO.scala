@@ -4,7 +4,7 @@ import java.util.logging.Logger
 
 import com.qa.ims.ImsDB.{customerCollection, customerReader, customerWriter}
 import reactivemongo.api.Cursor
-import reactivemongo.api.bson.document
+import reactivemongo.api.bson.{BSONDocument, BSONObjectID, BSONString, document}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -13,6 +13,7 @@ import scala.util.{Failure, Success}
 object CustomerDAO extends DAO[Customer]{
 
   private val LOGGER = Logger.getLogger(CustomerDAO.getClass.getSimpleName)
+
   override def create(customer: Customer): Unit = {
     // first _ is an object that is not yet created in memory
     customerCollection.flatMap(_.insert.one(customer).map(_ => { }))
@@ -30,8 +31,26 @@ object CustomerDAO extends DAO[Customer]{
       }
     }
   }
+  def readById(customer: Customer): Unit = {
+    val id = doc.[BSONString]("_id").get
+    val query = BSONDocument("_id" -> idVal)
+  }
 
-  override def update(t: Customer): Unit = ???
+  override def update(customer: Customer): Unit = ???
 
-  override def delete(id: String): Unit = ???
+  override def delete(customer: Customer): Unit = {
+
+    val customers: Future[List[Customer]] = customerCollection.flatMap(_.find(document())
+      .cursor[Customer]()
+      .collect[List](-1, Cursor.FailOnError[List[Customer]]()))
+    customers andThen {
+      case Success(value) => {
+        value.foreach(customer => customerCollection.flatMap(_.delete.one(customer).map(_ => { })))
+      }
+      case Failure(e) => {
+        LOGGER.severe(e.getMessage.toString)
+      }
+    }
+
+  }
 }

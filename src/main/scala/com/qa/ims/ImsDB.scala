@@ -27,6 +27,6 @@ object ImsDB {
   implicit def itemWriter: BSONDocumentWriter[Item] = Macros.writer[Item]
   implicit def itemReader: BSONDocumentReader[Item] = Macros.reader[Item]
 
-   implicit def orderWriter: BSONDocumentWriter[Order] = Macros.writer[Order]
-   implicit def orderReader: BSONDocumentReader[Order] = Macros.reader[Order]
+ implicit def orderWriter: BSONDocumentWriter[Order] = Macros.writer[Order]
+ implicit def orderReader: BSONDocumentReader[Order] = Macros.reader[Order]
 }
