@@ -3,6 +3,7 @@ package com.qa.ims
 import java.util.Scanner
 import java.util.logging.Logger
 
+//import com.qa.ims.dao.CustomerDAO
 import reactivemongo.api.bson.{BSONObjectID, BSONString}
 
 object CustomerController extends Controller {
@@ -18,20 +19,26 @@ object CustomerController extends Controller {
     val forename = getInput()
     LOGGER.info("SURNAME:")
     val surname = getInput()
-    CustomerDAO.create(new Customer(BSONString(BSONObjectID.generate().stringify), forename, surname))
+    ImsRepository.createCustomer(new Customer(BSONString(BSONObjectID.generate().stringify), forename, surname))
   }
 
   override def readAll: Unit = {
-    CustomerDAO.readAll()
+    ImsRepository.readAll()
   }
 
-  override def update: Unit = ???
+  override def update: Unit = {
+    LOGGER.info("FORENAME:")
+    val forename = getInput()
+    LOGGER.info("SURNAME:")
+    val surname = getInput()
+    ImsRepository.updateCustomer(new Customer(BSONString(BSONObjectID.generate().stringify), forename, surname))
+  }
 
   override def delete: Unit = {
     LOGGER.info("FORENAME:")
     val forename = getInput()
     LOGGER.info("SURNAME:")
     val surname = getInput()
-    CustomerDAO.delete(new Customer(BSONString(BSONObjectID.generate().stringify), forename, surname))
+    //ImsRepository.delete(new Customer(BSONString(BSONObjectID.generate().stringify), forename, surname))
   }
 }

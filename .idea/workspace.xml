@@ -3,9 +3,37 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3078f589-791f-4063-9235-73406b013d31" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/dao/DAO.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/dao/ItemDAO.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/CustomerController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/CustomerController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/CustomerDAO.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/DAO.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ImsDB.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ImsRepository.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ItemDAO.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/OrderDAO.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/controllers/ItemController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/controllers/ItemController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/controllers/OrderController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/controllers/OrderController.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +52,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Package Object" />
-        <option value="Scala Object" />
         <option value="Scala Class" />
+        <option value="Scala Object" />
+        <option value="Scala Trait" />
       </list>
     </option>
   </component>
@@ -42,7 +71,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../imsScalaProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scalarockthejvm/rockthejvm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -56,7 +85,7 @@
       <module name="project4dammit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.ims.*" />
+          <option name="PATTERN" value="com.qa.ims.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,39 +110,50 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="413" y="118" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1600811691862">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600811691862" />
-    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1600791032566">
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1600892369994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1600791032566" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600808982896">
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1600892369994" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600890859135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600808982896" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1600871299764">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600890859135" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1600895643273">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600871299763" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1600865324121">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600895643273" />
+    <state width="1323" height="291" key="GridCell.Tab.0.bottom" timestamp="1600896807105">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600865324121" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1600865324121">
+    <state width="1323" height="291" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600896807105" />
+    <state width="1323" height="291" key="GridCell.Tab.0.center" timestamp="1600896807104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600865324121" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1600865324121">
+    <state width="1323" height="291" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600896807104" />
+    <state width="1323" height="291" key="GridCell.Tab.0.left" timestamp="1600896807104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600865324121" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1600865324121">
+    <state width="1323" height="291" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600896807104" />
+    <state width="1323" height="291" key="GridCell.Tab.0.right" timestamp="1600896807104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600865324121" />
+    <state width="1323" height="291" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600896807104" />
     <state x="348" y="68" key="NewModule_or_Project.wizard" timestamp="1600870365689">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

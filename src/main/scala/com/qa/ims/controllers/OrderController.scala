@@ -3,7 +3,8 @@ package com.qa.ims.controllers
 import java.util.Scanner
 import java.util.logging.Logger
 
-import com.qa.ims.{Controller, Order, OrderDAO}
+import com.qa.ims.dao.OrderDAO
+import com.qa.ims.{Controller, Order}
 import reactivemongo.api.bson.{BSONObjectID, BSONString}
 
 object OrderController extends Controller{
