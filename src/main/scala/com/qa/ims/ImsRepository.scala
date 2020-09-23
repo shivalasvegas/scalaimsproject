@@ -40,8 +40,8 @@ object ImsRepository {
 
   implicit def customerReader: BSONDocumentReader[Customer] = Macros.reader[Customer]
 
-  def findCustomerByName(customer: Customer): Future[List[Customer]] =
-    customerCollection.flatMap(_.find(BSONDocument("forename" -> customer.forename)).
+  def findCustomerByName(forename: String): Future[List[Customer]] =
+    customerCollection.flatMap(_.find(BSONDocument("forename" -> forename)).
       cursor[Customer]().
       collect[List](-1, Cursor.FailOnError[List[Customer]]()))
 
@@ -64,8 +64,8 @@ object ImsRepository {
         }
     }
 
-  def deleteCustomer(customer: Customer): Unit = {
-    val futureRemove = customerCollection.flatMap(_.delete.one(BSONDocument("_id" -> customer._id)))
+  def deleteCustomer(forename: String): Unit = {
+    val futureRemove = customerCollection.flatMap(_.delete.one(BSONDocument("name" -> forename)))
     futureRemove.onComplete { // callback
       case Failure(e) => throw e
       case Success(writeResult) => println("successfully removed document")

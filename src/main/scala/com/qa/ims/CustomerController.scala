@@ -31,14 +31,13 @@ object CustomerController extends Controller {
     val forename = getInput()
     LOGGER.info("SURNAME:")
     val surname = getInput()
-    ImsRepository.updateCustomer(new Customer(BSONString(BSONObjectID.generate().stringify), forename, surname))
+    ImsRepository.updateCustomer(new Customer(_, forename, surname))
   }
 
   override def delete: Unit = {
     LOGGER.info("FORENAME:")
     val forename = getInput()
-    LOGGER.info("SURNAME:")
-    val surname = getInput()
-    //ImsRepository.delete(new Customer(BSONString(BSONObjectID.generate().stringify), forename, surname))
+
+    ImsRepository.deleteCustomer(forename)
   }
 }

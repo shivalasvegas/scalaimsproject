@@ -23,17 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3078f589-791f-4063-9235-73406b013d31" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/dao/DAO.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/dao/ItemDAO.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/CustomerController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/CustomerController.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/CustomerDAO.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/DAO.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ImsDB.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ImsRepository.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ItemDAO.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/OrderDAO.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/controllers/ItemController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/controllers/ItemController.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/controllers/OrderController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/controllers/OrderController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ImsRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ImsRepository.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
