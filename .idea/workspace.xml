@@ -23,8 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3078f589-791f-4063-9235-73406b013d31" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/DatabaseUser.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/CustomerController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/CustomerController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/Customer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/Customer.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ImsRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ImsRepository.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,12 +64,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scalarockthejvm/rockthejvm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/scala/com/qa/ims" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.qa.ims.models" />
       <recent name="com.qa.ims" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\shiva\Documents\AA_PROJECTS\AA_scala\project4dammit\src\main\scala\com\qa\ims" />
     </key>
   </component>
   <component name="RunManager">
@@ -114,10 +118,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="118" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1600811691862">
+    <state x="413" y="118" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1600936983334">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600811691862" />
+    <state x="413" y="118" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600936983334" />
     <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1600936095780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

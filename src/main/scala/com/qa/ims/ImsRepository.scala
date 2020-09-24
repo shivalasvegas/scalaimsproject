@@ -7,7 +7,7 @@ import reactivemongo.api.{AsyncDriver, Cursor, DB, MongoConnection}
 import reactivemongo.api.bson.{BSONDocument, BSONDocumentReader, BSONDocumentWriter, BSONString, Macros, document}
 
 object ImsRepository {
- 
+
   val mongoUri = "mongodb://localhost:27017"
 
   import ExecutionContext.Implicits.global
@@ -30,7 +30,16 @@ object ImsRepository {
   def createCustomer(customer: Customer): Future[Unit] =
     customerCollection.flatMap(_.insert.one(customer).map(_ => {}))
 
+  def create(databaseUser: DatabaseUser): Future[Unit] = {
+    databaseUser match {
+      case a: Customer => customerCollection.flatMap(_.insert.one(databaseUser.asInstanceOf).map(_ => {}))
+      case b: Item => itemCollection.flatMap(_.insert.one(databaseUser.asInstanceOf).map(_ => {}))
+      case c: Order => orderCollection.flatMap(_.insert.one(databaseUser.asInstanceOf).map(_ => {}))
+    }
 
+  }
+
+  // specific customer queries
   def findCustomerByName(forename: String): Future[List[Customer]] =
     customerCollection.flatMap(_.find(BSONDocument("forename" -> forename)).
       cursor[Customer]().
