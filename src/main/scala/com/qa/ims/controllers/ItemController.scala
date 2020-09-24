@@ -4,7 +4,7 @@ import java.util.Scanner
 import java.util.logging.Logger
 
 import com.qa.ims.dao.ItemDAO
-import com.qa.ims.{Controller, Item}
+import com.qa.ims.{Controller, ItemCase}
 import reactivemongo.api.bson.{BSONObjectID, BSONString}
 
 object ItemController extends Controller {
@@ -20,7 +20,7 @@ object ItemController extends Controller {
     val item = getInput()
     LOGGER.info("PRICE:")
     val price = getInput()
-    ItemDAO.create(new Item(BSONString(BSONObjectID.generate().stringify), item, price))
+    ItemDAO.create(new ItemCase(BSONString(BSONObjectID.generate().stringify), item, price))
   }
 
   override def readAll: Unit = {

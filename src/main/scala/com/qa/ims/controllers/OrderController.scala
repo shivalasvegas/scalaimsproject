@@ -4,7 +4,7 @@ import java.util.Scanner
 import java.util.logging.Logger
 
 import com.qa.ims.dao.OrderDAO
-import com.qa.ims.{Controller, Order}
+import com.qa.ims.{Controller, OrderCase}
 import reactivemongo.api.bson.{BSONObjectID, BSONString}
 
 object OrderController extends Controller{
@@ -20,7 +20,7 @@ object OrderController extends Controller{
     val item = getInput()
     LOGGER.info("PRICE:")
     val price = getInput()
-    OrderDAO.create(new Order(BSONString(BSONObjectID.generate().stringify), item, price))
+    OrderDAO.create(new OrderCase(BSONString(BSONObjectID.generate().stringify), item, price))
   }
 
   override def readAll: Unit = {

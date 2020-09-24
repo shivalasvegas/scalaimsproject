@@ -19,8 +19,9 @@ object CustomerController extends Controller {
     val forename = getInput()
     LOGGER.info("SURNAME:")
     val surname = getInput()
-    //ImsRepository.createCustomer(new Customer(BSONString(BSONObjectID.generate().stringify), forename, surname))
-    ImsRepository.create(new Customer(BSONString(BSONObjectID.generate().stringify), forename, surname))
+    //ImsRepository.createCustomer(new CustomerCase(BSONString(BSONObjectID.generate().stringify), forename, surname))
+    val newCustomer: DatabaseUser = Customer(BSONString(BSONObjectID.generate().stringify), forename, surname)
+    ImsRepository.create(newCustomer)
   }
 
   override def readAll: Unit = {
