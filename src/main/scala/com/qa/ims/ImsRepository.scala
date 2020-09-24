@@ -25,10 +25,13 @@ object ImsRepository {
   def orderCollection: Future[BSONCollection] = db1.map(_.collection("order"))
 
   implicit def customerWriter: BSONDocumentWriter[Customer] = Macros.writer[Customer]
-  implicit def ItemWriter: BSONDocumentWriter[Item] = Macros.writer[Item]
-  implicit def OrderWriter: BSONDocumentWriter[Order] = Macros.writer[Order]
+  implicit def itemWriter: BSONDocumentWriter[Item] = Macros.writer[Item]
+  implicit def orderWriter: BSONDocumentWriter[Order] = Macros.writer[Order]
   implicit def databaseWriter: BSONDocumentWriter[DatabaseUser] = Macros.writer[DatabaseUser]
-  implicit def customerReader: BSONDocumentReader[CustomerCase] = Macros.reader[CustomerCase]
+  implicit def customerReader: BSONDocumentReader[Customer] = Macros.reader[Customer]
+  implicit def itemReader: BSONDocumentReader[Item] = Macros.reader[Item]
+  implicit def orderReader: BSONDocumentReader[Order] = Macros.reader[Order]
+  implicit def databaseReader: BSONDocumentReader[DatabaseUser] = Macros.reader[DatabaseUser]
 
 //  def createCustomer(customer: CustomerCase): Future[Unit] =
 //    customerCollection.flatMap(_.insert.one(customer).map(_ => {}))
@@ -43,29 +46,78 @@ object ImsRepository {
   }
 
   // specific customer queries
-  def findCustomerByName(forename: String): Future[List[CustomerCase]] =
-    customerCollection.flatMap(_.find(BSONDocument("forename" -> forename)).
-      cursor[CustomerCase]().
-      collect[List](-1, Cursor.FailOnError[List[CustomerCase]]()))
+//  def findCustomerByName(forename: String): Future[List[CustomerCase]] =
+//    customerCollection.flatMap(_.find(BSONDocument("forename" -> forename)).
+//      cursor[CustomerCase]().
+//      collect[List](-1, Cursor.FailOnError[List[CustomerCase]]()))
+//
+//  def findCustomerById(customer: CustomerCase): Future[List[CustomerCase]] =
+//    customerCollection.flatMap(_.find(BSONDocument("_id" -> customer._id)). // query builder
+//      cursor[CustomerCase](). // using the result cursor
+//      collect[List](-1, Cursor.FailOnError[List[CustomerCase]]()))
 
-  def findCustomerById(customer: CustomerCase): Future[List[CustomerCase]] =
-    customerCollection.flatMap(_.find(BSONDocument("_id" -> customer._id)). // query builder
-      cursor[CustomerCase](). // using the result cursor
-      collect[List](-1, Cursor.FailOnError[List[CustomerCase]]()))
+    def readAll(user: String): Unit = {
+        user match {
+          case "customer" => readAllCustomers()
+          case "item" => readAllItems()
+          case "order" => readAllOrders()
+        }
+        }
+//      def readAllUsers(): Unit = {
+//        val customers: Future[List[CustomerCase]] = customerCollection.flatMap(_.find(document())
+//          .cursor[CustomerCase]()
+//          .collect[List](-1, Cursor.FailOnError[List[CustomerCase]]()))
+//        customers andThen {
+//          case Success(value) => {
+//            value.foreach(customer => println(customer.toString))
+//          }
+//          case Failure(e) => {
+//            println(e.getMessage.toString)
+//          }
+//        }
+//      }
 
-    def readAll(): Unit = {
-        val customers: Future[List[CustomerCase]] = customerCollection.flatMap(_.find(document())
-          .cursor[CustomerCase]()
-          .collect[List](-1, Cursor.FailOnError[List[CustomerCase]]()))
-        customers andThen {
-          case Success(value) => {
-            value.foreach(customer => println(customer.toString))
-          }
-          case Failure(e) => {
-            println(e.getMessage.toString)
+        def readAllCustomers(): Unit = {
+          val customers: Future[List[DatabaseUser]] = customerCollection.flatMap(_.find(document())
+            .cursor[DatabaseUser]()
+            .collect[List](-1, Cursor.FailOnError[List[DatabaseUser]]()))
+          customers andThen {
+            case Success(value) => {
+              value.foreach(customer => println(customer.toString))
+            }
+            case Failure(e) => {
+              println(e.getMessage.toString)
+            }
           }
         }
+
+  def readAllItems(): Unit = {
+    val items: Future[List[DatabaseUser]] = itemCollection.flatMap(_.find(document())
+      .cursor[DatabaseUser]()
+      .collect[List](-1, Cursor.FailOnError[List[DatabaseUser]]()))
+    items andThen {
+      case Success(value) => {
+        value.foreach(item => println(item.toString))
+      }
+      case Failure(e) => {
+        println(e.getMessage.toString)
+      }
     }
+  }
+  def readAllOrders(): Unit = {
+    val orders: Future[List[DatabaseUser]] = orderCollection.flatMap(_.find(document())
+      .cursor[DatabaseUser]()
+      .collect[List](-1, Cursor.FailOnError[List[DatabaseUser]]()))
+    orders andThen {
+      case Success(value) => {
+        value.foreach(order => println(order.toString))
+      }
+      case Failure(e) => {
+        println(e.getMessage.toString)
+      }
+    }
+  }
+
 
 
 }

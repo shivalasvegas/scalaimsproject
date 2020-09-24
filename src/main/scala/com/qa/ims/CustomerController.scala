@@ -15,9 +15,9 @@ object CustomerController extends Controller {
     SCANNER.nextLine()
   }
   override def create: Unit = {
-    LOGGER.info("FORENAME:")
+    println("FORENAME:")
     val forename = getInput()
-    LOGGER.info("SURNAME:")
+    println("SURNAME:")
     val surname = getInput()
     //ImsRepository.createCustomer(new CustomerCase(BSONString(BSONObjectID.generate().stringify), forename, surname))
     val newCustomer: DatabaseUser = Customer(BSONString(BSONObjectID.generate().stringify), forename, surname)
@@ -25,7 +25,7 @@ object CustomerController extends Controller {
   }
 
   override def readAll: Unit = {
-    ImsRepository.readAll()
+    ImsRepository.readAll("customer")
   }
 
   override def update: Unit = ???
