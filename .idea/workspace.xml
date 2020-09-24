@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3078f589-791f-4063-9235-73406b013d31" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/CustomerController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/CustomerController.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ImsRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qa/ims/ImsRepository.scala" afterDir="false" />
     </list>
@@ -117,10 +118,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600811691862" />
-    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1600892369994">
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1600936095780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1600892369994" />
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1600936095780" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600890859135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -129,22 +130,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600895643273" />
-    <state width="1323" height="291" key="GridCell.Tab.0.bottom" timestamp="1600896807105">
+    <state width="1323" height="277" key="GridCell.Tab.0.bottom" timestamp="1600931105962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="291" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600896807105" />
-    <state width="1323" height="291" key="GridCell.Tab.0.center" timestamp="1600896807104">
+    <state width="1323" height="277" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600931105962" />
+    <state width="1323" height="277" key="GridCell.Tab.0.center" timestamp="1600931105962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="291" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600896807104" />
-    <state width="1323" height="291" key="GridCell.Tab.0.left" timestamp="1600896807104">
+    <state width="1323" height="277" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600931105962" />
+    <state width="1323" height="277" key="GridCell.Tab.0.left" timestamp="1600931105962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="291" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600896807104" />
-    <state width="1323" height="291" key="GridCell.Tab.0.right" timestamp="1600896807104">
+    <state width="1323" height="277" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600931105962" />
+    <state width="1323" height="277" key="GridCell.Tab.0.right" timestamp="1600931105962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="291" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600896807104" />
+    <state width="1323" height="277" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600931105962" />
     <state x="348" y="68" key="NewModule_or_Project.wizard" timestamp="1600870365689">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

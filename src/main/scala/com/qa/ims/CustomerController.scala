@@ -26,18 +26,7 @@ object CustomerController extends Controller {
     ImsRepository.readAll()
   }
 
-  override def update: Unit = {
-    LOGGER.info("FORENAME:")
-    val forename = getInput()
-    LOGGER.info("SURNAME:")
-    val surname = getInput()
-    ImsRepository.updateCustomer(new Customer(_, forename, surname))
-  }
+  override def update: Unit = ???
 
-  override def delete: Unit = {
-    LOGGER.info("FORENAME:")
-    val forename = getInput()
-
-    ImsRepository.deleteCustomer(forename)
-  }
+  override def delete: Unit = ???
 }
