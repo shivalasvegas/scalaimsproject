@@ -2,7 +2,7 @@ package com.qa.ims.dao
 
 import java.util.logging.Logger
 
-//import com.qa.ims.ImsRepository.customerCollection
+//import com.qa.ims.ImsApplication.customerCollection
 import com.qa.ims.CustomerCase
 import reactivemongo.api.Cursor
 import reactivemongo.api.bson.{BSONDocument, BSONString, document}

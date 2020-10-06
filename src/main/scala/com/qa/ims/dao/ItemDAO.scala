@@ -2,7 +2,7 @@ package com.qa.ims.dao
 
 import java.util.logging.Logger
 
-//import com.qa.ims.ImsRepository.itemCollection
+//import com.qa.ims.ImsApplication.itemCollection
 import com.qa.ims.ItemCase
 import reactivemongo.api.Cursor
 import reactivemongo.api.bson.document

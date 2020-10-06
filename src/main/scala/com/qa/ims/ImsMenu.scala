@@ -3,7 +3,7 @@ package com.qa.ims
 import java.util.Scanner
 import java.util.logging.Logger
 
-import com.qa.ims.controllers.{ItemController, OrderController}
+import com.qa.ims.controllers.{Controller, CustomerController, ItemController, OrderController}
 
 object ImsMenu {
 
@@ -31,10 +31,11 @@ object ImsMenu {
     menu()
     }
     def doAction(controller: Controller, operation: String): Unit = {
-      if (operation.equalsIgnoreCase("CREATE")) controller.create
-      else if (operation.equalsIgnoreCase("READ")) controller.readAll
-      else if (operation.equalsIgnoreCase("UPDATE")) controller.update
-      else if (operation.equalsIgnoreCase("DELETE")) controller.delete
+
+      if (operation.toUpperCase.equals("CREATE")) controller.create
+      else if (operation.toUpperCase.equals("READ")) controller.readAll
+      else if (operation.toUpperCase.equals("UPDATE")) controller.update
+      else if (operation.toUpperCase.equals("DELETE")) controller.delete
       else println(s"Invalid --> doAction() $operation")
     }
 }
