@@ -1,6 +1,9 @@
 package com.qa.ims
 
+import java.util.Scanner
+
 import reactivemongo.api.bson.collection.BSONCollection
+
 import scala.util.{Failure, Success}
 import scala.concurrent.{ExecutionContext, Future}
 import reactivemongo.api.{AsyncDriver, Cursor, DB, MongoConnection}
@@ -49,6 +52,7 @@ object ImsApplication {
       }
   }
 
+  
   def readAllUsers(collection: Future[BSONCollection]): Unit = {
       val userList: Future[List[DatabaseUser]] = collection.flatMap(_.find(document())
         .cursor[DatabaseUser]()
@@ -62,5 +66,24 @@ object ImsApplication {
         }
       }
     }
+
+    private val SCANNER = new Scanner(Console.in)
+
+    def getInput(): String = {
+      SCANNER.nextLine()
+    }
+
+  def deleteUser(collection: Future[BSONCollection]): Unit ={
+    println("Please enter the id you would like to remove:")
+    val userId = getInput()
+    val query = BSONDocument("_id" -> userId)
+    val futureRemove = collection.flatMap(_.delete.one(query))
+
+    futureRemove.onComplete { // callback
+      case Failure(e) => throw e
+      case Success(writeResult) => println("successfully removed document")
+    }
+
+  }
 
 }

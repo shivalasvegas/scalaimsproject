@@ -31,5 +31,8 @@ object CustomerController extends Controller {
 
   override def update: Unit = ???
 
-  override def delete: Unit = ???
+  override def delete: Unit = {
+
+
+  }
 }
